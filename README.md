@@ -1,4 +1,4 @@
-# SQLResource-Provider
+# Get-SQLServersInSubscription
 
 This script will check every VM in a subscription for the existence of SQL based on the existence of Registry Key: HKLM:\Software\Microsoft\Microsoft SQL Server\Instance Names\SQL
 
