@@ -2,10 +2,10 @@
 #Select-AzSubscription
 
 $Script = (Read-Host "Enter the Path to CheckSQLStatus.ps1")
-$Script = "C:\Code\CheckSQLStatus.ps1"
+#$Script = "C:\Code\CheckSQLStatus.ps1"
 
 $CSVPath = (Read-Host "Enter the Path to CSV Output File")
-$CSVPath = "C:\Code\SQLStatus.csv"
+#$CSVPath = "C:\Code\SQLStatus.csv"
 $CSV=""
 
 #########################################################################################
