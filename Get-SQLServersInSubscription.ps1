@@ -1,7 +1,7 @@
 ﻿param (
 
-    [String]    $SubscriptionID = "dffaebb6-0064-4b76-bf7f-6892b370bd81",
-`   [String]    $Script = "C:\Code\CheckSQLStatus.ps1",
+    [String]    $SubscriptionID = "",
+`   [String]    $Script = "C:\Code\Get-SQLRegKey.ps1",
     [String]     $CSVPath = "C:\Code\SQLStatus.csv"
 
 )
