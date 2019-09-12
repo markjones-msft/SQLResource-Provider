@@ -1,12 +1,20 @@
-﻿#Login-AzAccount
-#Select-AzSubscription
+﻿param (
 
-$Script = (Read-Host "Enter the Path to CheckSQLStatus.ps1")
-#$Script = "C:\Code\CheckSQLStatus.ps1"
+    [String]    $SubscriptionID = "dffaebb6-0064-4b76-bf7f-6892b370bd81",
+`   [String]    $Script = "C:\Code\CheckSQLStatus.ps1",
+    [String]     $CSVPath = "C:\Code\SQLStatus.csv"
 
-$CSVPath = (Read-Host "Enter the Path to CSV Output File")
-#$CSVPath = "C:\Code\SQLStatus.csv"
-$CSV=""
+)
+
+#Login-AzAccount
+
+Select-AzSubscription   $SubscriptionID
+
+$subscriptionMessage = ("Actually targeting Azure subscription: {0} " -f $subscriptionID)
+Write-Host -BackgroundColor Black -ForegroundColor Yellow $subscriptionMessage
+
+Write-host -BackgroundColor Black -ForegroundColor Yellow "The following servers are found in this subscription:"
+write-host (Get-Azvm).Name
 
 #########################################################################################
 # Get All VMs in the subscription ad check for SQL based on Name and Registry
